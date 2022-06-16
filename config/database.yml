@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: oblako_test_production
-  username: oblako_test
-  password: <%= ENV["OBLAKO_TEST_DATABASE_PASSWORD"] %>
+  database: d3vjajpgc95bbm
+  username: uxendysrpwnaxr
+  password: <%= ENV["DATABASE_PASSWORD"] %>
