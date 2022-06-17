@@ -3,7 +3,7 @@ class ProjectsController < ActionController::Base
   skip_before_action :verify_authenticity_token
   #
   def index
-    @categories = Category.all
+    render json: Category.all.as_json(include: :todos)
   end
 
   def create_todo

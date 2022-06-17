@@ -1,8 +1,0 @@
-<% @categories.each do |category| %>
-    <% unless category.todos.empty? %>
-      <h2><%=  category.title  %></h2>
-      <%  category.todos.each do |todo|  %>
-        <p><%= todo.text %> - <span><%=  todo.isCompleted  %></span></p>
-      <%  end  %>
-    <%  end %>
-  <% end %>
