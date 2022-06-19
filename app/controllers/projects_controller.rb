@@ -9,8 +9,8 @@ class ProjectsController < ActionController::Base
   def create_todo
     text = params[:text]
     category_id = params[:category_id]
-    Todo.create(text: text, category_id: category_id)
-    render json: {"status": "ok"}
+    todo = Todo.create(text: text, category_id: category_id)
+    render json: todo
   end
 
   def update_todo
@@ -22,8 +22,8 @@ class ProjectsController < ActionController::Base
 
   def create_category
     title = params[:title]
-    Category.create(title: title)
-    render json: {"status": "ok"}
+    category = Category.create(title: title)
+    render json: category
   end
 
 end
