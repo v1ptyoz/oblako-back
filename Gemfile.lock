@@ -93,7 +93,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.1.0)
+    importmap-rails (1.1.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.5.11)
@@ -138,6 +138,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3.1)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (7.0.3)
@@ -223,6 +225,7 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.2, >= 7.0.2.4)
   selenium-webdriver
   sprockets-rails
