@@ -17,7 +17,7 @@ class ProjectsController < ActionController::Base
     todo = Todo.find(params[:todoId])
     todo.isCompleted = !todo.isCompleted
     todo.save
-    render json: {"status": "ok"}
+    render json: todo
   end
 
   def create_category
