@@ -9,6 +9,11 @@ class ProjectsController < ActionController::Base
   def create_todo
     text = params[:text]
     category_id = params[:category_id]
+    new_category_title = params[:new_category_title]
+    if new_category_title
+      category = Category.create(title: new_category_title)
+      category_id = category.id
+    end
     todo = Todo.create(text: text, category_id: category_id)
     render json: todo
   end
@@ -18,12 +23,6 @@ class ProjectsController < ActionController::Base
     todo.isCompleted = !todo.isCompleted
     todo.save
     render json: todo
-  end
-
-  def create_category
-    title = params[:title]
-    category = Category.create(title: title)
-    render json: category
   end
 
 end
